@@ -22,7 +22,7 @@ display:flex;
 flex-direction:column;
 }
 
-/* HEADER */
+/* TOPO */
 
 .header{
 background:#1f2d3d;
@@ -34,7 +34,7 @@ font-weight:bold;
 box-shadow:0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* CONTEÚDO */
+/* ÁREA DO SISTEMA */
 
 .content{
 flex:1;
@@ -42,7 +42,8 @@ position:relative;
 overflow:hidden;
 }
 
-/* área de corte */
+/* RECORTE INTELIGENTE */
+
 .iframe-wrapper{
 position:absolute;
 top:0;
@@ -52,13 +53,14 @@ bottom:0;
 overflow:hidden;
 }
 
-/* iframe ajustado */
+/* IFRAME AJUSTADO */
+
 iframe{
 position:absolute;
-top:-60px; /* remove login */
+top:-65px; /* remove login */
 left:0;
 width:100%;
-height:calc(100% + 110px); /* compensa topo + rodapé */
+height:calc(100% + 120px); /* compensa topo + rodapé */
 border:none;
 }
 
