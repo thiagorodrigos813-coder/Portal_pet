@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PetHub - Portal Corporativo</title>
+<title>PetHub - Portal de Suporte</title>
 
 <style>
 
@@ -16,44 +16,8 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-display:flex;
 height:100vh;
 background:#f4f6fb;
-}
-
-/* SIDEBAR */
-
-.sidebar{
-width:230px;
-background:#1f2d3d;
-color:white;
-padding:20px;
-display:flex;
-flex-direction:column;
-}
-
-.sidebar h2{
-margin-bottom:30px;
-text-align:center;
-}
-
-.sidebar a{
-text-decoration:none;
-color:white;
-padding:12px;
-margin:5px 0;
-border-radius:8px;
-transition:0.3s;
-}
-
-.sidebar a:hover{
-background:#2b7cff;
-}
-
-/* MAIN */
-
-.main{
-flex:1;
 display:flex;
 flex-direction:column;
 }
@@ -61,10 +25,13 @@ flex-direction:column;
 /* HEADER */
 
 .header{
-background:#ffffff;
-padding:15px 25px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+background:#1f2d3d;
+color:white;
+padding:18px;
+text-align:center;
+font-size:22px;
 font-weight:bold;
+box-shadow:0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* CONTEÚDO */
@@ -75,7 +42,7 @@ position:relative;
 overflow:hidden;
 }
 
-/* área que corta corretamente */
+/* área de corte */
 .iframe-wrapper{
 position:absolute;
 top:0;
@@ -85,7 +52,7 @@ bottom:0;
 overflow:hidden;
 }
 
-/* iframe ajustado de verdade */
+/* iframe ajustado */
 iframe{
 position:absolute;
 top:-60px; /* remove login */
@@ -101,25 +68,8 @@ border:none;
 
 <body>
 
-<!-- MENU -->
-
-<div class="sidebar">
-<h2>🐶 PetHub</h2>
-
-<a href="#">🏠 Início</a>
-<a href="#">👥 Colaboradores</a>
-<a href="#">📘 Boas Práticas</a>
-<a href="#">💻 Programas</a>
-<a href="#">🛠 Suporte</a>
-
-</div>
-
-<!-- CONTEÚDO -->
-
-<div class="main">
-
 <div class="header">
-Portal de Suporte Corporativo
+🐶 PetHub - Portal de Suporte
 </div>
 
 <div class="content">
@@ -130,8 +80,6 @@ Portal de Suporte Corporativo
 src="https://www.jotform.com/app/260124630613647?appEmbedded=1"
 allow="geolocation; microphone; camera">
 </iframe>
-
-</div>
 
 </div>
 
