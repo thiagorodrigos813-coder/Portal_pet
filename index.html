@@ -1,48 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
-<title>PetHub - Portal de TI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PetHub - Portal Corporativo</title>
 
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+display:flex;
+height:100vh;
 background:#f4f6fb;
 }
 
-header{
+/* SIDEBAR */
+
+.sidebar{
+width:230px;
 background:#1f2d3d;
 color:white;
-padding:15px;
-text-align:center;
-font-size:22px;
+padding:20px;
+display:flex;
+flex-direction:column;
 }
 
-.container{
-display:flex;
-justify-content:center;
-margin-top:20px;
+.sidebar h2{
+margin-bottom:30px;
+text-align:center;
 }
+
+.sidebar a{
+text-decoration:none;
+color:white;
+padding:12px;
+margin:5px 0;
+border-radius:8px;
+transition:0.3s;
+}
+
+.sidebar a:hover{
+background:#2b7cff;
+}
+
+/* MAIN */
+
+.main{
+flex:1;
+display:flex;
+flex-direction:column;
+}
+
+/* HEADER */
+
+.header{
+background:#ffffff;
+padding:15px 25px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+font-weight:bold;
+}
+
+/* CONTEÚDO */
+
+.content{
+flex:1;
+position:relative;
+overflow:hidden;
+}
+
+/* área que corta corretamente */
+.iframe-wrapper{
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+overflow:hidden;
+}
+
+/* iframe ajustado de verdade */
+iframe{
+position:absolute;
+top:-60px; /* remove login */
+left:0;
+width:100%;
+height:calc(100% + 110px); /* compensa topo + rodapé */
+border:none;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<header>
-PetHub - Portal de Suporte
-</header>
+<!-- MENU -->
 
-<div class="container">
+<div class="sidebar">
+<h2>🐶 PetHub</h2>
+
+<a href="#">🏠 Início</a>
+<a href="#">👥 Colaboradores</a>
+<a href="#">📘 Boas Práticas</a>
+<a href="#">💻 Programas</a>
+<a href="#">🛠 Suporte</a>
+
+</div>
+
+<!-- CONTEÚDO -->
+
+<div class="main">
+
+<div class="header">
+Portal de Suporte Corporativo
+</div>
+
+<div class="content">
+
+<div class="iframe-wrapper">
 
 <iframe
-id="JotFormIFrame-260124630613647"
-title="PetHub"
-allow="geolocation; microphone; camera"
 src="https://www.jotform.com/app/260124630613647?appEmbedded=1"
-style="height:800px; width:400px; border:0;">
+allow="geolocation; microphone; camera">
 </iframe>
+
+</div>
+
+</div>
 
 </div>
 
